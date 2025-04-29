@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  .navegacao {
+    margin: 20px 0;
+  }
+  
+  #calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .dia, .cabecalho {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    user-select: none;
+  }
+  
+  .dia:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .folga {
+    background-color: #4caf50;
+    color: white;
+  }
+  
