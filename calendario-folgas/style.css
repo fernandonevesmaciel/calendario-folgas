@@ -1,41 +1,118 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background: #f4f4f4;
+    background: #f1f5f9;
     padding: 20px;
   }
   
   h1 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 1.5em;
   }
   
   .navegacao {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .navegacao button {
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .navegacao button:hover {
+    background-color: #0056b3;
+  }
+  
+  #mes-ano {
+    font-size: 1em;
+    font-weight: bold;
   }
   
   #calendario {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-    max-width: 600px;
+    max-width: 360px;
     margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
   
   .dia, .cabecalho {
-    padding: 15px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9em;
     user-select: none;
   }
   
   .dia:hover {
-    background-color: #e0e0e0;
+    background-color: #e2e8f0;
     cursor: pointer;
   }
   
   .folga {
-    background-color: #4caf50;
+    background-color: #38a169;
     color: white;
+    font-weight: bold;
+  }
+  
+  .cabecalho {
+    background-color: #edf2f7;
+    font-weight: bold;
+    color: #333;
+    cursor: default;
+  }
+  
+  /* Responsividade para telas pequenas */
+  @media (max-width: 420px) {
+
+    h1{
+        font-size: 3em;
+    }
+
+    #calendario {
+      max-width: 100%;
+      height: 600px;
+      padding: 8px;
+    }
+  
+    .dia, .cabecalho {
+      font-size: 2em;
+      padding: 10px 0;
+      
+    }
+  
+    .navegacao {
+      flex-direction: row;
+      gap: 8px;
+      font-size: 2.5em;
+    }
+  
+    .navegacao button {
+      width: 200px;
+      height: 80px;
+      margin: 10px;
+    }
   }
   
